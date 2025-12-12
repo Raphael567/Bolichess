@@ -19,7 +19,7 @@ public class Tabuleiro {
     }
 
     public void mover(int lo, int co, int ld, int cd) {
-        Peca p = getPeca(lo, co);
+        Peca p = getPecaTabuleiro(lo, co);
 
         if (MovimentoValidator.validar(this, lo, co, ld, cd)) {
             matriz[ld][cd] = p;
@@ -39,7 +39,7 @@ public class Tabuleiro {
         }
     }
 
-    public Peca getPeca(int lo, int co) {
+    public Peca getPecaTabuleiro(int lo, int co) {
         return matriz[lo][co];
     }
 }

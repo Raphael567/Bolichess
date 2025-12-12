@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 public class Bolichess {
 
 	public static void main(String[] args) {
+        //TODO: ui-console para o usuário digitar as suas jogadas
         Tabuleiro t = new Tabuleiro();
         t.imprimir();
 

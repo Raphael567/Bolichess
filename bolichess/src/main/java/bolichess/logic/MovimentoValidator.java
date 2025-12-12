@@ -5,7 +5,7 @@ import bolichess.models.Tabuleiro;
 
 public class MovimentoValidator {
     public static boolean validar(Tabuleiro t, int lo, int co, int ld, int cd) {
-        Peca p = t.getPeca(lo, co);
+        Peca p = t.getPecaTabuleiro(lo, co);
 
         if (p == null) {
             System.out.println("Não existe peça nesse local");
@@ -26,6 +26,6 @@ public class MovimentoValidator {
     }
 
     private static boolean temPecaNoCaminho(Tabuleiro t, int ld, int cd) {
-        return t.getPeca(ld, cd) != null;
+        return t.getPecaTabuleiro(ld, cd) != null;
     }
 }
