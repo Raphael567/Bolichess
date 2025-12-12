@@ -10,6 +10,8 @@ public abstract class Peca {
         this.cor = cor;
     }
 
-    public abstract boolean movimentoValido(int linhaOrigem, int colOrigem,
+    public abstract boolean movimentoValido(Tabuleiro t, int linhaOrigem, int colOrigem,
                                             int linhaDestino, int colDestino);
+
+    public abstract boolean movimentoRetoOuDiagonal (int colOrigem, int colDestino);
 }

@@ -14,6 +14,8 @@ public class Tabuleiro {
     private void inicializar() {
         matriz[5][0] = new Peao("branca");
         matriz[6][0] = new Peao("preta");
+        matriz[5][1] = new Peao("branca");
+        matriz[6][2] = new Peao("preta");
     }
 
     public void mover(int lo, int co, int ld, int cd) {
@@ -24,7 +26,7 @@ public class Tabuleiro {
             matriz[lo][co] = null;
             System.out.println("Movimento realizado");
         } else {
-            System.out.println("Movimento inválido");
+            System.out.println("Movimento não realizado");
         }
     }
 
@@ -38,13 +40,6 @@ public class Tabuleiro {
     }
 
     public Peca getPeca(int lo, int co) {
-        Peca p = matriz[lo][co];
-
-        if (p == null) {
-            System.out.println("Não existe peça na origem");
-            return null;
-        }
-
-        return p;
+        return matriz[lo][co];
     }
 }
