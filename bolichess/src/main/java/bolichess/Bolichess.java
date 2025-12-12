@@ -9,7 +9,10 @@ public class Bolichess {
         Tabuleiro t = new Tabuleiro();
         t.imprimir();
 
-        t.mover(6, 1, 5, 0);
+        t.mover(6, 2, 5, 1);
+        t.imprimir();
+
+        t.mover(5, 1, 4, 1);
         t.imprimir();
 	}
 }

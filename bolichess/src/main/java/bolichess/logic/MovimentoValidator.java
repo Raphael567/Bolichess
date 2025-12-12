@@ -12,20 +12,20 @@ public class MovimentoValidator {
             return false;
         };
 
-        if (!p.movimentoValido(lo, co, ld, cd)) {
+        if (!p.movimentoValido(t, lo, co, ld, cd)) {
             System.out.println("Movimento inválido");
             return false;
         }
 
-        if (temPecaNoCaminho(t, lo, co, ld, cd)) {
+        if (temPecaNoCaminho(t, ld, cd)) {
             System.out.println("Tem peça no caminho");
-            return false;
+            return !p.movimentoRetoOuDiagonal(co, cd);
         }
 
         return true;
     }
 
-    private static boolean temPecaNoCaminho(Tabuleiro t, int lo, int co, int ld, int cd) {
+    private static boolean temPecaNoCaminho(Tabuleiro t, int ld, int cd) {
         return t.getPeca(ld, cd) != null;
     }
 }
