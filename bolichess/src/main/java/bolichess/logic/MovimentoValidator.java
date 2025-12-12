@@ -21,11 +21,7 @@ public class MovimentoValidator {
         return true;
     }
 
-    //TODO: Fazer lógica da peça no caminho
     private static boolean temPecaNoCaminho(Tabuleiro t, int lo, int co, int ld, int cd) {
-        Peca p = t.getPeca(lo, co);
-        Peca p2 = t.getPeca(ld, cd);
-
-        return false;
+        return t.getPeca(ld, cd) != null;
     }
 }
