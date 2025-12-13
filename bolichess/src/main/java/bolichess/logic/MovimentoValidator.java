@@ -9,12 +9,7 @@ public class MovimentoValidator {
 
         if (p == null) return false;
 
-        if (!p.movimentoValido(t, lo, co, ld, cd)) {
-            System.out.println("\nMovimento inválido");
-            return false;
-        }
-
-        System.out.println("\nMovimento válido");
+        if (!p.movimentoValido(t, lo, co, ld, cd)) return false;
 
         if (temPecaNoCaminho(t, ld, cd)) {
             System.out.println("Tem peça no caminho");
