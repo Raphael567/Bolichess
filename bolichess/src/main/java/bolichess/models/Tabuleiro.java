@@ -1,6 +1,5 @@
 package bolichess.models;
 
-import bolichess.logic.MovimentoValidator;
 import lombok.Data;
 
 @Data
@@ -20,19 +19,14 @@ public class Tabuleiro {
     public void mover(int lo, int co, int ld, int cd) {
         Peca p = getPecaTabuleiro(lo, co);
 
-        if (MovimentoValidator.validar(this, lo, co, ld, cd)) {
-            matriz[ld][cd] = p;
-            matriz[lo][co] = null;
-            System.out.println("Movimento realizado\n");
-        } else {
-            System.out.println("Movimento não realizado\n");
-        }
+        matriz[ld][cd] = p;
+        matriz[lo][co] = null;
     }
 
     public void imprimir() {
         char[] colunas = {'A','B','C','D','E','F','G','H'};
 
-        System.out.print("   ");
+        System.out.print("\n   ");
         for (char c : colunas) {
             System.out.print(" " + c + " ");
         }
