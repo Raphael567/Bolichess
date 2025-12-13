@@ -26,7 +26,7 @@ public class Tabuleiro {
     public void imprimir() {
         char[] colunas = {'A','B','C','D','E','F','G','H'};
 
-        System.out.print("   ");
+        System.out.print("\n   ");
         for (char c : colunas) {
             System.out.print(" " + c + " ");
         }

@@ -30,7 +30,7 @@ public class ConsoleUI {
             co = lerInt("ColunaOrigem: ");
 
             if (t.getPecaTabuleiro(lo, co) != null) break;
-            System.out.println("Não existe peça nesse local");
+            System.out.println("\nNão existe peça nesse local");
         }
 
         while (true) {
@@ -46,7 +46,7 @@ public class ConsoleUI {
     }
 
     private boolean perguntarSeDesejaSair() {
-        int escolha = lerInt("Deseja sair? (1 = sim, 0 = não): ");
+        int escolha = lerInt("\nDeseja sair? (1 = sim, 0 = não): ");
         return escolha == 1;
     }
 
