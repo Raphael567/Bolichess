@@ -12,24 +12,36 @@ public class Tabuleiro {
     }
 
     private void inicializar() {
-        matriz[5][0] = new Peao("branca");
-        matriz[1][1] = new Peao("preta");
+        matriz[7][0] = new Peao("branca");
+        matriz[0][1] = new Peao("preta");
     }
 
+    //TODO: Converter entrada do usuário para coordenadas do xadrez E3 -> matriz[5][4]
     public void mover(int lo, int co, int ld, int cd) {
         Peca p = getPecaTabuleiro(lo, co);
 
         if (MovimentoValidator.validar(this, lo, co, ld, cd)) {
             matriz[ld][cd] = p;
             matriz[lo][co] = null;
-            System.out.println("Movimento realizado");
+            System.out.println("Movimento realizado\n");
         } else {
-            System.out.println("Movimento não realizado");
+            System.out.println("Movimento não realizado\n");
         }
     }
 
     public void imprimir() {
+        char[] colunas = {'A','B','C','D','E','F','G','H'};
+
+        System.out.print("   ");
+        for (char c : colunas) {
+            System.out.print(" " + c + " ");
+        }
+        System.out.println();
+
         for (int i = 0; i < 8; i++) {
+            int numeroLinha = 8 - i;
+            System.out.print(numeroLinha + "  ");
+
             for (int j = 0; j < 8; j++) {
                 System.out.print(matriz[i][j] == null ? " . " : " " + matriz[i][j] + " ");
             }

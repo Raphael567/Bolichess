@@ -7,17 +7,14 @@ public class MovimentoValidator {
     public static boolean validar(Tabuleiro t, int lo, int co, int ld, int cd) {
         Peca p = t.getPecaTabuleiro(lo, co);
 
-        if (p == null) {
-            System.out.println("Não existe peça nesse local");
-            return false;
-        };
+        if (p == null) return false;
 
         if (!p.movimentoValido(t, lo, co, ld, cd)) {
-            System.out.println("Movimento inválido");
+            System.out.println("\nMovimento inválido");
             return false;
         }
 
-        System.out.println("Movimento válido");
+        System.out.println("\nMovimento válido");
 
         if (temPecaNoCaminho(t, ld, cd)) {
             System.out.println("Tem peça no caminho");
