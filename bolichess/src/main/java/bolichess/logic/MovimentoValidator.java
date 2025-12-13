@@ -17,6 +17,8 @@ public class MovimentoValidator {
             return false;
         }
 
+        System.out.println("Movimento válido");
+
         if (temPecaNoCaminho(t, ld, cd)) {
             System.out.println("Tem peça no caminho");
             return !p.movimentoRetoOuDiagonal(co, cd);
