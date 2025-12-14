@@ -11,9 +11,11 @@ public class MovimentoValidator {
 
         if (!p.movimentoValido(t, lo, co, ld, cd)) return false;
 
-        if (temPecaNoCaminho(t, ld, cd)) {
-            System.out.println("Tem peça no caminho");
-            return !p.movimentoRetoOuDiagonal(co, cd);
+        if (!p.movimentoRetoOuDiagonal(co, cd)) {
+            if (!temPecaNoCaminho(t, ld, cd)) {
+                System.out.println("Não tem peça no caminho");
+                return false;
+            }
         }
 
         return true;

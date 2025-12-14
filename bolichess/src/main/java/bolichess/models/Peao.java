@@ -27,11 +27,11 @@ public class Peao extends Peca {
     public boolean movimentoRetoOuDiagonal(int co, int cd) {
 
         if (co == cd) {
-            System.out.println("Movimento Reto");
+            System.out.println("\nMovimento Reto");
             return true;
         }
 
-        System.out.println("Movimento Diagonal");
+        System.out.println("\nMovimento Diagonal");
         return false;
     }
 
