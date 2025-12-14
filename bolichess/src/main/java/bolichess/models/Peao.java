@@ -17,7 +17,6 @@ public class Peao extends Peca {
 //        return false;
 //    }
 
-    //FIXME: Movimento Diagonal sem ter peça no local
     @Override
     public boolean movimentoValido(Tabuleiro t, int lo, int co, int ld, int cd) {
         return ((co == cd) || (cd == co+1) || (cd == co-1)) && (ld == lo-1 ? (lo>ld) && (getCor().equals("branca")) : ld == lo+1);

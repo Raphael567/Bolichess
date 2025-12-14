@@ -12,7 +12,7 @@ public class Tabuleiro {
 
     private void inicializar() {
         matriz[7][0] = new Peao("branca");
-        matriz[6][1] = new Peao("branca");
+        matriz[6][1] = new Peao("preta");
         matriz[0][1] = new Peao("preta");
     }
 
