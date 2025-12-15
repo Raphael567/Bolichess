@@ -11,12 +11,10 @@ public class Tabuleiro {
     }
 
     private void inicializar() {
-        matriz[7][0] = new Peao("branca");
-        matriz[6][1] = new Peao("preta");
-        matriz[0][1] = new Peao("preta");
+        matriz[1][0] = new Peao("preta");
+        matriz[6][1] = new Peao("branca");
     }
 
-    //TODO: Converter entrada do usuário para coordenadas do xadrez E3 -> matriz[5][4]
     public void mover(int lo, int co, int ld, int cd) {
         Peca p = getPecaTabuleiro(lo, co);
 

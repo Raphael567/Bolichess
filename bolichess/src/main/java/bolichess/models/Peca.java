@@ -2,6 +2,7 @@ package bolichess.models;
 
 import lombok.Data;
 
+//TODO: Criar outras peças
 @Data
 public abstract class Peca {
     protected String cor;
