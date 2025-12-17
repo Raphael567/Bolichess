@@ -22,18 +22,8 @@ public class Peao extends Peca {
         return ((co == cd) || (cd == co+1) || (cd == co-1)) && (ld == lo-1 ? lo>ld && getCor().equals("branca") : ld == lo+1 && getCor().equals("preta"));
     }
 
-    //FIXME: Impedir movimento diagonal para trás
     @Override
-    public boolean movimentoRetoOuDiagonal(int co, int cd) {
-
-        if (co == cd) {
-            System.out.println("\nMovimento Reto");
-            return true;
-        }
-
-        System.out.println("\nMovimento Diagonal");
-        return false;
-    }
+    public boolean movimentoRetoOuDiagonal(int co, int cd) { return co == cd; }
 
     @Override
     public String toString() {

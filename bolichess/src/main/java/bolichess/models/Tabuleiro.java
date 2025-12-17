@@ -13,6 +13,8 @@ public class Tabuleiro {
     private void inicializar() {
         matriz[1][0] = new Peao("preta");
         matriz[6][1] = new Peao("branca");
+        matriz[5][2] = new Peao("preta");
+        matriz[4][3] = new Peao("branca");
     }
 
     public void mover(int lo, int co, int ld, int cd) {
