@@ -23,7 +23,7 @@ public class Peao extends Peca {
     }
 
     @Override
-    public boolean movimentoRetoOuDiagonal(int co, int cd) { return co == cd; }
+    public boolean movimentoDiagonal(int co, int cd) { return co == cd; }
 
     @Override
     public String toString() {
