@@ -1,5 +1,6 @@
 package bolichess.logic;
 
+import bolichess.models.Cavalo;
 import bolichess.models.Peao;
 import bolichess.models.Peca;
 import bolichess.models.Tabuleiro;
@@ -11,7 +12,7 @@ public class MovimentoValidator {
 
         if (!p.movimentoValido(t, lo, co, ld, cd)) return false;
 
-        if (!(p instanceof Peao)) {
+        if (!(p instanceof Peao) && !(p instanceof Cavalo)) {
             if (temPecaNoCaminho(t, lo, co, ld, cd)) {
                 System.out.println("Existe peça no caminho");
                 return false;

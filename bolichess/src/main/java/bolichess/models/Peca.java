@@ -13,6 +13,4 @@ public abstract class Peca {
 
     public abstract boolean movimentoValido(Tabuleiro t, int linhaOrigem, int colOrigem,
                                             int linhaDestino, int colDestino);
-
-    public abstract boolean movimentoDiagonal (int colOrigem, int colDestino);
 }

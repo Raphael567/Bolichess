@@ -11,25 +11,25 @@ public class Tabuleiro {
     }
 
     private void inicializar() {
-        matriz[0][0] = new Torre("preta");
-        matriz[0][7] = new Torre("preta");
+        matriz[0][0] = new Cavalo("preta");
+        matriz[7][6] = new Cavalo("branca");
 
-        for(int l = 0; l <= 3; l++) {
-            for(int c = 1; c <= 6; c++) {
-                if (matriz[l][c] == null)
-                    matriz[l][c] = new Peao("preta");
-            }
-        }
-
-        matriz[7][0] = new Torre("branca");
-        matriz[7][7] = new Torre("branca");
-
-        for(int l = 7; l >= 4; l--) {
-            for(int c = 1; c <= 6; c++) {
-                if (matriz[l][c] == null)
-                    matriz[l][c] = new Peao("branca");
-            }
-        }
+//        for(int l = 0; l <= 3; l++) {
+//            for(int c = 1; c <= 6; c++) {
+//                if (matriz[l][c] == null)
+//                    matriz[l][c] = new Peao("preta");
+//            }
+//        }
+//
+//        matriz[7][0] = new Torre("branca");
+//        matriz[7][7] = new Torre("branca");
+//
+//        for(int l = 7; l >= 4; l--) {
+//            for(int c = 1; c <= 6; c++) {
+//                if (matriz[l][c] == null)
+//                    matriz[l][c] = new Peao("branca");
+//            }
+//        }
     }
 
     public void mover(int lo, int co, int ld, int cd) {
