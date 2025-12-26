@@ -11,8 +11,8 @@ public class Tabuleiro {
     }
 
     private void inicializar() {
-        matriz[0][0] = new Cavalo("preta");
-        matriz[7][6] = new Cavalo("branca");
+        matriz[0][0] = new Rei("preta");
+        matriz[7][6] = new Rei("branca");
 
 //        for(int l = 0; l <= 3; l++) {
 //            for(int c = 1; c <= 6; c++) {
