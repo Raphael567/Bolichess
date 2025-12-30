@@ -12,7 +12,10 @@ public class Tabuleiro {
 
     private void inicializar() {
         matriz[0][0] = new Rei("preta");
+        matriz[0][6] = new Torre("preta");
+        matriz[0][1] = new Rainha("preta");
         matriz[7][6] = new Rei("branca");
+        matriz[7][5] = new Rainha("branca");
 
 //        for(int l = 0; l <= 3; l++) {
 //            for(int c = 1; c <= 6; c++) {
@@ -39,6 +42,16 @@ public class Tabuleiro {
         matriz[lo][co] = null;
     }
 
+    public void simularMovimento(int lo, int co, int ld, int cd) {
+        matriz[ld][cd] = matriz[lo][co];
+        matriz[lo][co] = null;
+    }
+
+    public void desfazerMovimento(int lo, int co, int ld, int cd, Peca capturada) {
+        matriz[lo][co] = matriz[ld][cd];
+        matriz[ld][cd] = capturada;
+    }
+
     public void imprimir() {
         char[] colunas = {'A','B','C','D','E','F','G','H'};
 
@@ -61,5 +74,18 @@ public class Tabuleiro {
 
     public Peca getPecaTabuleiro(int lo, int co) {
         return matriz[lo][co];
+    }
+
+    public int[] getReiCoordenada(String cor) {
+        for(int l = 0; l < matriz.length; l++) {
+            for (int c = 0; c < matriz[l].length; c++) {
+                Peca p = getPecaTabuleiro(l, c);
+                if (p instanceof Rei && p.getCor().equals(cor)) {
+                    return new int[]{l, c};
+                }
+            }
+        }
+
+        return null;
     }
 }
